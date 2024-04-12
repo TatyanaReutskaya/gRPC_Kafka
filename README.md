@@ -1,10 +1,10 @@
-###UserService  
+### UserService  
 gRPC server  
 Kafka consumer  
-###LibraryService  
+### LibraryService  
 gRPC client  
 Kafka producer  
-###GeneralScheme.png
+### GeneralScheme.png  
 This image shows a service communication diagram including ports and datascheme
-###Start
+### Start  
 Before starting services, you must start Kafka (docker-compose in root directory) and PostgreSQL for each service
