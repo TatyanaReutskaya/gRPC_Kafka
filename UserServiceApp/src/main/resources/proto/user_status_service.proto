@@ -1,0 +1,19 @@
+syntax = "proto3";
+package com.example.jrpc.grpc;
+
+option java_multiple_files = true;
+service UserStatusService {
+  rpc getUserInfoByPhone(PhoneRequest) returns (UserInfoResponse);
+}
+message UserInfoResponse {
+  string userId = 1;
+  UserStatusGrpc userStatusGrpc = 2;
+  string expirationDate = 3;
+}
+enum UserStatusGrpc {
+  ACTIVE = 0;
+  BLOCKED = 1;
+}
+message PhoneRequest {
+  string phone=1;
+}
